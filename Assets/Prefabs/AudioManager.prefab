@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1446790785762082}
+  m_IsPrefabParent: 1
+--- !u!1 &1446790785762082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4882033419252984}
+  - component: {fileID: 114840603241658982}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4882033419252984
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1446790785762082}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114840603241658982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1446790785762082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f45f1738bf14f84381b37813615f314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: DamageSound
+    clip: {fileID: 8300000, guid: 8177ffbc5df15c443addf2c042ce4b2e, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: CatchSound
+    clip: {fileID: 8300000, guid: 168db05b006f0f44e8b956f1ad726424, type: 3}
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: BGMusic
+    clip: {fileID: 8300000, guid: 861d5ad199da96546a989aecef4fda94, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: LifeUpSound
+    clip: {fileID: 8300000, guid: 3eeb8c44aa0620b4db79e761c8383672, type: 3}
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: BGMusic2
+    clip: {fileID: 8300000, guid: aabd00396be210848a569fc1b9a1987e, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: BGMusic3
+    clip: {fileID: 8300000, guid: c86776f230ea2c3409d940ae6fc62e56, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: BGMusic0
+    clip: {fileID: 8300000, guid: 90240eb35032c604ca361f81192a3c5e, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: EndMusic
+    clip: {fileID: 8300000, guid: 71b5b2a73a1031a4f8fa703d330af52e, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  audioMixer: {fileID: 24300002, guid: 7bba2508fd31c864aa81cd17c834b3ef, type: 2}
