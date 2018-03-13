@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour {
         offsetX = Camera.main.ScreenToWorldPoint(new Vector3(offsetX,0,0)).x;               //This is used to convert the offset to screen position
 
         //Offset in Y axix - the Y position of the player
-        offsetY = -4.2f;      //Change this to be based on screen size or some shit
+        offsetY = -4.1f;      //Change this to be based on screen size or some shit
       
     }
 
@@ -33,12 +33,6 @@ public class PlayerMovement : MonoBehaviour {
         mousePosition = new Vector2(Mathf.Clamp(mousePositionX, -offsetX, offsetX), offsetY);
         
         //Move game object to the location of the mouse (Y axis stays the same)
-        gameObject.transform.position = mousePosition;
-
-        //This works, after setting it up in unity editor BUT it only reacts to the movement of mouse, not to its position.
-        /*
-        mousePosition2 = Input.GetAxis("Horizontal");          //Horizontal axis is not corresponding to mouse in any way!! 
-        Debug.Log(mousePosition2);                             
-        */
+        gameObject.transform.position = mousePosition;        
     }
 }

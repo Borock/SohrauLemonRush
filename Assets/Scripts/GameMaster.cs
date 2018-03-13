@@ -70,8 +70,8 @@ public class GameMaster : MonoBehaviour {
         set { _hitPoints = Mathf.Clamp(value, 0, 5); }
     }
 
-    private int damage;                 //Damage dealt by not catching a lemon or catching a rock
-    private int healthRegen;            //and the hp received for catching one
+    private int damage = 1;                 //Damage dealt by not catching a lemon or catching a rock
+    private int healthRegen = 1;            //and the hp received for catching one
 
     //Game completion
     public static bool gameisOver = false;
@@ -123,7 +123,8 @@ public class GameMaster : MonoBehaviour {
     }
 
     private void Start()
-    {  Debug.Log(difficulty);
+    {
+        Debug.Log(difficulty);
         gameisOver = false;
         //Place left and right walls at the side edges of the screen, and ground on the bottom edge (+ any offsets if needed)
         leftWallPosition = cam.ScreenToWorldPoint(new Vector3(0f, 0f, 0f));
@@ -139,11 +140,7 @@ public class GameMaster : MonoBehaviour {
         spawnPosition.y = Screen.height + 20;
         spawnPosition.z = transform.position.z;
         obstacleSpawnPosition = spawnPosition;
-        lifeUpSpawnPosition = spawnPosition;
-
-        //Initialize damage, health regen and fruit spawn rate based on selected difficulty
-        damage = 1;
-        healthRegen = 1;
+        lifeUpSpawnPosition = spawnPosition;        
 
         //Play background music
         
@@ -196,7 +193,7 @@ public class GameMaster : MonoBehaviour {
     //Adds point to score and heals the player a little
     public void LemonCatch()
     {
-        score += 5;
+        score += 2;
         audioManager.Play("CatchSound", true);
         UpdateUI();       
     }
@@ -213,17 +210,17 @@ public class GameMaster : MonoBehaviour {
         }
         else if (dif == Difficulty.Normal)
         {
-            rate = Mathf.Clamp(rate, 1.1f, 1.5f);
+            rate = Mathf.Clamp(rate, 1.2f, 1.5f);
         }
         else if (dif == Difficulty.Hard)
         {
-            rate = Mathf.Clamp(rate, 1.3f, 1.7f);
+            rate = Mathf.Clamp(rate, 1.5f, 2.0f);
         }
         else
         {
             Debug.LogError("No difficulty specified!");           
         }
-        //Debug.Log("Difficulty: " + dif + " | Rate: " + rate);
+        
         return rate;
     }
 
@@ -258,7 +255,7 @@ public class GameMaster : MonoBehaviour {
             Vector3 obstacleSpawnPoint = new Vector3(cam.ScreenToWorldPoint(obstacleSpawnPosition).x, cam.ScreenToWorldPoint(obstacleSpawnPosition).y, obstacleSpawnPosition.z);
             //Generate a random number, if it's less then 0.3, then spawn obstacle
             float rand = Random.Range(0f, 1f);
-            if (rand < 0.25)
+            if (rand < 0.4f)
             {
                 //Spawn an obstacle at a spawn point with random rotation
                 Instantiate(obstaclePrefab, obstacleSpawnPoint, transform.rotation);
@@ -281,7 +278,7 @@ public class GameMaster : MonoBehaviour {
             Vector3 lifeUpSpawnPoint = new Vector3(cam.ScreenToWorldPoint(lifeUpSpawnPosition).x, cam.ScreenToWorldPoint(lifeUpSpawnPosition).y, lifeUpSpawnPosition.z);
             //Generate a random number, if it's less then 0.3, then spawn life up
             float rand = Random.Range(0f, 1f);
-            if (rand < 0.2)
+            if (rand < 0.33f)
             {
                 //Spawn an obstacle at a spawn point with random rotation
                 Instantiate(lifeUpPrefab, lifeUpSpawnPoint, transform.rotation);                

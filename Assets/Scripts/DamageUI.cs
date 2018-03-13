@@ -8,7 +8,7 @@ public class DamageUI : MonoBehaviour {
     [SerializeField] private Sprite[] hpIndicators;
     private Image lives;
 
-    private void Start()
+    private void Awake()
     {
         lives = GetComponent<Image>();
     }
@@ -22,7 +22,7 @@ public class DamageUI : MonoBehaviour {
 
         if(hp >= 5)
         {
-            //lives.sprite = hpIndicators[5];
+            lives.sprite = hpIndicators[5];
         }
         else if (hp == 4)
         {
