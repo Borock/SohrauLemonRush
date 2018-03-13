@@ -4697,18 +4697,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DefaultPosInfluence: {x: 0.15, y: 0, z: 0}
   DefaultRotInfluence: {x: 1, y: 1, z: 1}
---- !u!114 &1738338933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1738338931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: b85b8ea930a9e524fac7183464bbb59f, type: 2}
 --- !u!4 &1738338935 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4480324694362832, guid: 0a2466315b064c64f81b5bee38571d02,
