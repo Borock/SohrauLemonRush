@@ -22,7 +22,7 @@ public class DamageUI : MonoBehaviour {
 
         if(hp >= 5)
         {
-            lives.sprite = hpIndicators[5];
+            //lives.sprite = hpIndicators[5];
         }
         else if (hp == 4)
         {
@@ -44,6 +44,5 @@ public class DamageUI : MonoBehaviour {
         {
             lives.sprite = hpIndicators[0];
         }
-
     }
 }

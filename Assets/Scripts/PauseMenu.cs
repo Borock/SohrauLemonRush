@@ -9,6 +9,11 @@ public class PauseMenu : MonoBehaviour {
 
     public GameMaster gm;
 
+    private void Start()
+    {
+        gm = FindObjectOfType<GameMaster>();
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quit");
