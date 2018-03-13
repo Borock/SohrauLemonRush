@@ -210,11 +210,11 @@ public class GameMaster : MonoBehaviour {
         }
         else if (dif == Difficulty.Normal)
         {
-            rate = Mathf.Clamp(rate, 1.2f, 1.5f);
+            rate = Mathf.Clamp(rate, 1.2f, 1.65f);
         }
         else if (dif == Difficulty.Hard)
         {
-            rate = Mathf.Clamp(rate, 1.5f, 2.0f);
+            rate = Mathf.Clamp(rate, 1.7f, 2.0f);
         }
         else
         {
