@@ -190,10 +190,10 @@ public class GameMaster : MonoBehaviour {
         UpdateUI();
     }
 
-    //Adds point to score and heals the player a little
+    //Adds point to score 
     public void LemonCatch()
     {
-        score += 50;
+        score += 2;
         audioManager.Play("CatchSound", true);
         UpdateUI();       
     }
